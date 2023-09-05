@@ -1,0 +1,5 @@
+05/09/2023
+PHP Environment Setup | Variable, Constant, Comments, Printing output | Addition Subtraction Multiplication Division in PHP |  PHP printf, sprintf
+
+10/09/2023
+If Else, Nested If Else | Ternary Operators, Nested Ternary Operators, switch case | VSCode Power Tips | VSCode Settings & Extensions for PHP Laravel Web Development
