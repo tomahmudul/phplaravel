@@ -1,2 +1,11 @@
 git config --global user.name "Mahmudul Hassan"
 git config --global user.email hassan.01303@gmail.com
+
+Create the Project and well, test it.
+run git init
+run git add
+run git commit
+Open GitHub and create a new repo with the master branch.
+run git branch -M main locally
+run git remote add origin https://github.com/tomahmudul/phplaravel.git
+run git push -u origin main
