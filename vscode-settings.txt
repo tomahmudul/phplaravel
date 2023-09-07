@@ -1,0 +1,38 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "tabnine.experimentalAutoImports": true,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.linkedEditing": true,
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "json.schemas": [
+    
+    ],
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Fira Code'",
+    //'JetBrains Mono','Fira Code', monospace'
+    "phpfmt.passes": [
+        "AlignDoubleArrow",
+        "SpaceAroundParentheses",
+        "ShortArray"
+
+      ],
+      "phpfmt.exclude": [
+        "AllmanStyleBraces"
+      ],
+      "phpfmt.psr2": false,
+      "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+      },
+      "workbench.list.openMode": "doubleClick",
+
+    
+}
