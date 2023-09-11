@@ -24,9 +24,12 @@ printf( "%.2f", $expression );
 /* Task 5: Conditional Operators
 Write a conditional statement that checks if a variable $marks is greater than or equal to 60 and less than 80. If the condition is true, print "Passed," otherwise print "Failed." */
 
-//$marks = 65;
+$marks = 65;
 if ( $marks >= 60 && $marks < 80 ) {
     print "Passed";
 } else {
     print "Failed";
 }
+
+
+echo 10 + 5 -3*4;
