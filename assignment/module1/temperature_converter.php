@@ -1,27 +1,22 @@
-<?php
-/* Design a PHP program called temperature_converter.php that converts temperatures between Celsius and Fahrenheit. Provide a form where the user can input a temperature value and select the conversion direction (Celsius to Fahrenheit or vice versa). Display the converted temperature. */
-?>
-
+<!-- Design a PHP program called temperature_converter.php that converts temperatures between Celsius and Fahrenheit. Provide a form where the user can input a temperature value and select the conversion direction (Celsius to Fahrenheit or vice versa). Display the converted temperature. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
+    <title>Temperature Converter</title>    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <div class="row">
         <h2>Temperature Converter</h2>
         <form method="post" action="">
-            <input type="number" name="temperature" placeholder="Enter temperature" required><br>
-            <div class="row">
-
-            <select id="units" name="units">
+            <input type="number" name="temperature" placeholder="Enter temperature" required><br>            
+            <select id="units" name="units" class="dropdown-menu">
                 <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
                 <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
-            </select>
-
+            </select>            
             <button type="submit">Convert</button>
         </form>
         <div id="result">
@@ -45,6 +40,7 @@
                 }
             }
             ?>
+        </div>
         </div>
     </div>
 </body>
