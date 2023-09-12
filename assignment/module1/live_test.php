@@ -30,6 +30,3 @@ if ( $marks >= 60 && $marks < 80 ) {
 } else {
     print "Failed";
 }
-
-
-echo 10 + 5 -3*4;
