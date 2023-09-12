@@ -18,11 +18,13 @@ Build a PHP calculator named simple_calculator.php that performs basic arithmeti
             <input type="number" name="num1" placeholder="Enter first number" required><br>
             <input type="number" name="num2" placeholder="Enter second number" required><br>
             <select name="operation">
-                <option value="add">Addition</option>
-                <option value="subtract">Subtraction</option>
-                <option value="multiply">Multiplication</option>
-                <option value="divide">Division</option>               
+                <option value="add">Addition (+)</option>
+                <option value="subtract">Subtraction (-)</option>
+                <option value="multiply">Multiplication (*)</option>
+                <option value="divide">Division (/)</option>               
             </select>
+
+            
             <button type="submit" class="btn btn-primary">Calculate</button>
         </form>
         <div id="result">
@@ -32,27 +34,27 @@ Build a PHP calculator named simple_calculator.php that performs basic arithmeti
                 $num1 = $_POST["num1"];
                 $num2 = $_POST["num2"];
                 $operation = $_POST["operation"];
-                $text = "Result of the chosen operation: ";
+                $text = "Result of the chosen operation ";
 
                 switch ( $operation ) {
                     case "add":
                     $result = $num1 + $num2;
-                    echo $text.$result;
+                    echo $text." ({$num1} + {$num2}) =".$result;                    
                     break;
                     case "subtract":
                     $result = $num1 - $num2;
-                    echo $text.$result;
+                    echo $text." ({$num1} - {$num2}) =".$result;
                     break;
                     case "multiply":
                     $result = $num1 * $num2;
-                    echo $text.$result;
+                    echo $text." ({$num1} * {$num2}) =".$result;
                     break;
                     case "divide":
                     if ( $num2 != 0 ) {
                         $result = $num1 / $num2;
-                        echo $text.$result;
+                        echo $text." ({$num1} / {$num2}) =".number_format($result, 2);
                     } else {
-                        echo "Cannot divide by zero.";
+                        echo "Can't divide by zero.";
                     }
                     break;                
                 }

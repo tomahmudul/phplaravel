@@ -1,4 +1,3 @@
-
 <!-- Task 6: Comparison Tool
 Develop a PHP tool named comparison_tool.php that compares two numbers and displays the larger one using the ternary operator. Create a form where the user can input two numbers. Use the ternary operator to determine the larger number and display the result. -->
 <!DOCTYPE html>
@@ -15,18 +14,18 @@ Develop a PHP tool named comparison_tool.php that compares two numbers and displ
     <div class="row">
         <h2>Comparison Tool</h2>
         <form method="post">
-            <input type="number" name="num1" placeholder="Enter first number" required><br>
-            <input type="number" name="num2" placeholder="Enter second number" required><br>            
+            <input type="number" name="numberOne" placeholder="Enter first number" required><br>
+            <input type="number" name="numberTwo" placeholder="Enter second number" required><br>            
             <button type="submit" class="btn btn-primary">Compare</button>
         </form>
         <div id="result">
             <?php
             if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
                 //print_r($_POST);exit;
-                $num1 = $_POST["num1"];
-                $num2 = $_POST["num2"];
+                $numberOne = $_POST["numberOne"];
+                $numberTwo = $_POST["numberTwo"];
                 
-                echo ($num1 > $num2)?"First number {$num1} is larger than second number {$num2}.":($num1 < $num2?" Second number {$num2} is larger than first number {$num1}.":"Both numbers are equal."); 
+                echo ($numberOne > $numberTwo)?"First number {$numberOne} is larger than second number {$numberTwo}.":($numberOne < $numberTwo?" Second number {$numberTwo} is larger than first number {$numberOne}.":"Both numbers are equal."); 
             }
             ?>
         </div>
