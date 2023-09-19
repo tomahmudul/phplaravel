@@ -1,18 +1,16 @@
 <?php
-//call back function
+function multiply($x, $y){
+    return $x * $y;
+}
 
-$cars = array(
-    array('name' => 'Ferrari', 'rate' => 5),
-    array('name' => 'Benz', 'rate' => 5),
-    array('name' => 'BMW', 'rate' => 4),
-    array('name' => 'Volvo', 'rate' => 4)
-);
+echo multiply(10, 20);
 
 
-array_filter($cars, function($car) { return $car['rate'] > 4; });
+$multiply = function($x, $y){
+    return $x * $y;
+};
 
-print_r($cars);
-
+echo $multiply(10,20);
 
 
 
