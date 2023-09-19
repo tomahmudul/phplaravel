@@ -26,11 +26,7 @@
             "program": "${file}",
             "cwd": "${fileDirname}",
             "externalConsole": false,
-<<<<<<< HEAD
-            "port": 9000
-=======
             "port": 9003
->>>>>>> 4ad267c (module 2)
         },
         {
             "name": "Listen for Xdebug",
