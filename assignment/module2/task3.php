@@ -5,6 +5,7 @@ Fibonacci number is greater than 100, break out of the loop using the break stat
 
 //input
 $number = 20;
+
 if ( $number == 0 ) {
     echo "0";
 } else if ( $number == 1 ) {

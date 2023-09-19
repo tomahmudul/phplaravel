@@ -30,7 +30,7 @@ function useWhileLoop( $start, $end, $step ) {
 }
 
 //solution using do-while loop
-function useDoWhileLoopLoop( $start, $end, $step ) {
+function useDoWhileLoop( $start, $end, $step ) {
     $result = "";
     do {
         if ( $start % 2 == 0 ) {
@@ -55,7 +55,7 @@ function getEvenNumbers( $start = 1, $end = 20, $step = 2, $modeOfOperation = "f
         $step = 2;
     }
 
-    $output = "All even numbers from {$start} to {$end} using {$modeOfOperation} are: ".PHP_EOL;
+    $output = "All even numbers from {$start} to {$end} using {$modeOfOperation} are: " . PHP_EOL;
 
     if ( $start <= 1 ) {
         $start = 2;
@@ -68,13 +68,10 @@ function getEvenNumbers( $start = 1, $end = 20, $step = 2, $modeOfOperation = "f
         $output .= useWhileLoop( $start, $end, $step );
         break;
     case "dowhileLoop":
-        $output .= useDoWhileLoopLoop( $start, $end, $step );
+        $output .= useDoWhileLoop( $start, $end, $step );
         break;
-    case "forLoop":
-        $output .= useDoWhileLoopLoop( $start, $end, $step );
-        break;
-        // default:
-        //     $output .= useForLoop( $start, $end, $step );
+    default:
+        $output .= useForLoop( $start, $end, $step );
     }
 
     echo $output;

@@ -12,6 +12,7 @@ function fibonacciSeries( $counter ) {
         return ( fibonacciSeries( $counter - 1 ) + fibonacciSeries( $counter - 2 ) );
     }
 }
+
 //input
 $number = 15;
 
