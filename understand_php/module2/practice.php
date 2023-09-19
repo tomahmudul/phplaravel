@@ -1,79 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-//string reverse
-$str =  "I love PHP";
-for($i = strlen($str) -1; $i>=0; $i--) {
-   echo  $str[$i];
-}
-
-echo PHP_EOL;
-
-for($i = 0 ; $i <= 10; $i++ ) {
-
-   for($j = 0 ; $j<$i; $j++){
-       echo "*";
-   }
-   echo "*".PHP_EOL;
-   
-}
-
-
-function myFunc(){
-   
-}
-
-//0, 1, 1, 2, 3, 5, 8, 13, 21, 34
-
-
-/* function printFibonancy($terms){
-   $first = 0;
-   $second = 1;
-
-   if($terms <= 0 ){
-     echo "Invalid no";
-     return;
-   }
-   echo $first. " ".$second. " ";
-
-   for ($i=0; $i < 10; $i++) { 
-      # code...
-      $new = $first + $second;
-      echo $new." ";
-
-      $first = $second;
-      $second = $new;
-   }
-}
-
-
-printFibonancy(10); */
-
-
-/* Creating pattern of stars in ten rows.
- *
- **
- ***
- ****
- *****
- ******
- *******
- ********
- *********
- ********** */
-
-
-/*  for($i = 0 ; $i <= 10; $i++ ) {
-
-    for($j = 0 ; $j<$i; $j++){
-        echo "*";
-    }
-    echo "*".PHP_EOL;
-    
- }
-
- */
-=======
 //call back function
 
 $cars = array(
@@ -105,7 +30,6 @@ print_r($cars);
 
 
 
->>>>>>> 4ad267c (module 2)
 
 
 
