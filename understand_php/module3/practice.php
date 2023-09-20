@@ -1,16 +1,91 @@
 <?php
 //Mastering PHP Array & String
 
-//call back function
+//Most used PHP array functions
+//1. count()
 
-$cars = array(
-    array('name' => 'Ferrari', 'rate' => 5),
-    array('name' => 'Benz', 'rate' => 5),
-    array('name' => 'BMW', 'rate' => 4),
-    array('name' => 'Volvo', 'rate' => 4)
-);
+$cars = ["Ferrari", "Mercedes", "BMW", "Benz"];
+echo count( $cars );
+
+$cars = [
+    'Ferrari'  => [
+        'FI585',
+        'FI909',
+    ],
+    'Mercedes' => [
+        'M39',
+        'M69',
+    ],
+    'Benz'     => [
+        'BZ01',
+    ],
+];
+
+echo "Normal count: ".count( $cars );
+echo "Recursive count: ".count($cars, 1);
+
+//2. array_key_exists()
+$search_array = ['first'=>1, 'second'=>2];
+if(array_key_exists('first', $search_array) ) {
+    //echo 'the first is in the array';
+}
+
+$array = [0=>100, 'color'=>'red'];
+$keys = array_keys($array, 'red');
+//print_r( $keys );
+
+$array = array("blue", "red", "green", "blue", "blue");
+//print_r(array_keys($array, "blue"));
 
 
-array_filter($cars, function($car) { return $car['rate'] > 4; });
+//3. array_values()
 
-print_r($cars);
+$array = array("size" => "XL", "color" => "gold");
+//print_r(array_values($array));
+
+$os = array("Mac", "NT", "com"=>"Irix", "Linux");
+if (in_array("Irix", $os)) {
+    //echo "Got Irix";
+}
+if (in_array("mac", $os)) {
+   // echo "Got mac";
+}
+
+echo PHP_EOL;
+//array_pop()
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_pop($stack);
+//print_r($stack);
+
+echo PHP_EOL;
+//array_push()
+
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry", "another");
+//print_r($stack);
+
+echo PHP_EOL;
+//array_shift
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_shift($stack);
+//print_r($stack);
+echo PHP_EOL;
+
+$trans = array("a" => 1, "b" => 1, "c" => 2);
+$trans = array_flip($trans);
+//print_r($trans);
+echo PHP_EOL;
+
+$input  = array("php", 4.0, array("green", "red"));
+$reversed = array_reverse($input);
+$preserved = array_reverse($input, true);
+
+// print_r($input);
+// print_r($reversed);
+// print_r($preserved);
+echo PHP_EOL;
+
+$array1 = array("color" => "red", 2, 4);
+$array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+$result = array_merge($array1, $array2);
+print_r($result);
