@@ -4,7 +4,7 @@ Write a PHP program that calculates and prints the first 10 Fibonacci numbers. B
 Fibonacci number is greater than 100, break out of the loop using the break statement. */
 
 //input
-$number = 20;
+$number = 10;
 
 if ( $number == 0 ) {
     echo "0";

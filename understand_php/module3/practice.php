@@ -89,3 +89,53 @@ $array1 = array("color" => "red", 2, 4);
 $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
 $result = array_merge($array1, $array2);
 print_r($result);
+
+
+
+//Creating a nested associative array
+$student = [
+    'name' => 'Alice',
+    'contact' => [
+        'email' => 'alice@example.com',
+        'phone' => '123-456-7890'
+    ]
+];
+
+if(array_key_exists('age', $student)){
+    echo "Age is: ". $student['age'];
+}
+
+
+$keys = array_keys($student);
+$values = array_values($student);
+
+print_r($keys);
+print_r($values);
+
+$table = [
+    ['Name', 'Age', 'City'],
+    ['Alice', 22, 'New York'],
+    ['Bob', 30, 'San Francisco'],
+    ['Charlie', 25, 'Los Angeles']
+];
+
+//Displaying the table
+
+foreach ($table as $row) {
+    echo implode("\t", $row) . "\n";
+}
+
+$organization = [
+    "CEO" => "John",
+    "CTO" => [
+        "Enginerring Manager"=> "Alice",
+        "Developers"=> "Bob, Charlie"
+    ],
+    "CFO" => "David"
+];
+
+print_r($organization);
+
+echo $organization["CTO"]["Enginerring Manager"];
+
+
