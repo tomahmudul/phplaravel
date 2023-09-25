@@ -139,3 +139,26 @@ print_r($organization);
 echo $organization["CTO"]["Enginerring Manager"];
 
 
+$name = "Alice";
+$age = 25;
+$country = "Wonderland";
+
+$result = compact('name', 'age', 'country');
+print_r($result);
+
+$input = [12, 10, 9];
+
+// Positive length will pad to the Right
+$result = array_pad($input, 10, 2);
+print_r($result);
+
+// Negative length will pad to the left
+$result2 = array_pad($input, -5, -1);
+print_r($result2);
+
+$a1=array("first", "second", "third","fourth","fifth","second","third");
+$new_array=array_count_values($a1);
+
+print_r($new_array);
+
+
