@@ -1,4 +1,5 @@
 <?php
+//PHP: Inheritance
 class Myclass {
     public $font_size;
     public $font_color;
@@ -23,12 +24,19 @@ class Myclass {
     }
 }
 
-$f = new Myclass( '20px', 'red', 'Object Oriented Programming' );
-//$f->propertyPrint();
+class Mysubclass extends Myclass{
+    public function propertyPrint() {
+        echo $custom_text = "<p style=\"font-size:{$this->font_size};color:{$this->font_color};text-decoration:underline;\">{$this->string_name}</p>";
+    }
+}
 
-$mc = new Myclass('16px', 'green', 'Object Oriented Programming' );
+
+ $f = new Myclass( '20px', 'red', 'Object Oriented Programming' );
+// $f->propertyPrint();
+
+$mc = new Mysubclass('16px', 'green', 'Object Oriented Programming' );
 //$mc->propertyPrint();
 
 
-$mc1 = new Myclass('12px', 'blue', 'Object Oriented Programming' );
+//$mc1 = new Myclass('12px', 'blue', 'Object Oriented Programming' );
 //$mc1->propertyPrint();
