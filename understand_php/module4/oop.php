@@ -7,34 +7,13 @@
 //abstract - used for only classes and member functions
 //final -  class method defined as final can not be changed or overriden by any subclass
 
-/* Access Modifer    classes    functions    variables
-public    Not Applicable    Applicable    Applicable
-private    Not Applicable    Applicable    Applicable
-protected    Not Applicable    Applicable    Applicable
-abstract    Applicable    Applicable    Not Applicable
-final    Applicable    Applicable    Not Applicable */
+/* Access Modifer	classes	functions	variables
+public	Not Applicable	Applicable	Applicable
+private	Not Applicable	Applicable	Applicable
+protected	Not Applicable	Applicable	Applicable
+abstract	Applicable	Applicable	Not Applicable
+final	Applicable	Applicable	Not Applicable */
 
 /*
 public Access Modifier
-If we do not specify any access modifiers, all classes and its members are treated as public by default.*/
-
-abstract class Ourclass {  
-
-    function sayHi(){
-        echo "Hi";
-    }
-    abstract public function doSomething();
-}
-
-class myClass extends Ourclass {
-    public function doSomething() {
-        echo "do something in derived class";
-    }
-
-    function sayHi(){
-        echo "Hello";
-    }
-}
-
-$mc = new myClass();
-$mc->sayHi();
+If we do not specify any access modifiers, all classes and its members are treated as public by default.
