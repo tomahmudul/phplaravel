@@ -6,15 +6,15 @@ class Product {
     public float $price;
 
     // Initialize id, name and price properties
-    public function __construct($id, $name, $price ) {        
+    public function __construct( $id, $name, $price ) {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
     }
 
     // Returns product price as string  with two decimal places.
-    public function getFormattedPrice(){
-        return "\$".number_format( $this->price, 2, ".", "" );
+    public function getFormattedPrice() {
+        return "\$" . number_format( $this->price, 2, ".", "" );
     }
 
     //Prints the details of the product
