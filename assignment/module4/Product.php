@@ -32,13 +32,3 @@ class Product {
 // Test the Product class
 $product = new Product( 1, 'T-shirt', 19.99 );
 $product->showDetails();
-// //product 2
-// $product->id = 2;
-// $product->name = 'Formal Shirt';
-// $product->price = 15.56789;
-// $product->showDetails();
-// //product 3
-// $product->id = 3;
-// $product->name = 'Casual Pant';
-// $product->price = 25.1245;
-// $product->showDetails();
