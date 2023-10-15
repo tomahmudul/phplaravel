@@ -1,31 +1,36 @@
-<?php 
-class Fruit{
-    public $name;
-    public $color;
+<?php
+//access modifier
+class Car {
 
-    public function setName($name){  
-        $this->name = $name;
+    //private
+    private $model = "N/A";
+
+    public function __construct( $model = null ) {
+        if ( $model ) {
+            $this->model = $model;
+        }
     }
 
-    public function setColor($color){
-        $this->color = $color;
+    public function setModel( $model ) {
+
+        $allowedModels = ["Mercedes benz", "BMW"];
+
+        if ( in_array( $model, $allowedModels ) ) {
+            $this->model = $model;
+        } else {
+            $this->model = "not in allowed list.";
+        }
+
     }
 
-    public function getName(){
-        return $this->name;
+    public function getModel() {
+        return "The ".__CLASS__." model is " . $this->model;
     }
-
-    public function getColor(){
-        return $this->color;
-    }
-
 }
 
-$ft =  new Fruit();
-$ft->setName("Apple");
-$ft->setColor("Red");
-print_r($ft);
+$mercedes = new Car("Mercedes");
 
-$ft->name = 'Guava';
-$ft->color = 'Green';
-print_r($ft);
+// We try to access a private property from outside the class.
+//$mercedes -> model = "Mercedes benz";
+//$mercedes->setModel( "Mercedsdses benz" );
+echo $mercedes->getModel();

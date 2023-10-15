@@ -18,3 +18,29 @@ final	Applicable	Applicable	Not Applicable */
 public Access Modifier
 If we do not specify any access modifiers, all classes and its members are treated as public by default.*/
 
+class Calculator{
+    public $num1;
+    public $num2;
+    public $sum;
+    public $multiplication;
+    public function __construct($num1, $num2){
+        $this->num1 = $num1;
+        $this->num2 = $num2;
+    }
+
+    public function add(){
+        $this->sum = $this->num1 + $this->num2;
+        return $this->sum;
+    }
+
+    public function multiplication(){
+        $this->multiplication = $this->num1 * $this->num2;
+        return $this->multiplication;
+    }
+    
+}
+
+$cal = new Calculator(12, 23);
+echo $cal->add();
+echo PHP_EOL;
+echo $cal->multiplication();
