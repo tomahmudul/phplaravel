@@ -1,0 +1,27 @@
+{
+    "karim@gmail.com": {
+        "username": "karim",
+        "password": "123",
+        "role": "user"
+    },
+    "karim1@gmail.com": {
+        "username": "karim",
+        "password": "123",
+        "role": "user"
+    },
+    "karim11@gmail.com": {
+        "username": "karim",
+        "password": "123",
+        "role": "user"
+    },
+    "rahim@gmail.com": {
+        "username": "rahim",
+        "password": "123",
+        "role": "user"
+    },
+    "user@gmail.com": {
+        "username": "user",
+        "password": "123",
+        "role": "user"
+    }
+}
