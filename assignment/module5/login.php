@@ -6,7 +6,7 @@ require("functions.php");
 $emailErr = $pwdErr = $rememberErr = $wrongErr = '';
 $email = $pwd = $remember = '';
 
-$succMsg = (isset($_GET["msg"]) && $_GET["msg"]) ? "User registered successfully, Please login here.": "";
+$succMsg = (isset($_GET["msg"]) && $_GET["msg"]) ? "User registered successfully.": "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])){
     if (empty($_POST['email'])){
@@ -38,9 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])){
 
         $users = file_exists( $usersFile ) ? json_decode( file_get_contents( $usersFile ), true ) : [];
 
-        if ( isset($users[$email])  && $users[$email]["password"] == $pwd) {   
+        if( $email == "admin@gmail.com" && $pwd == "admin"){
+            $_SESSION['email'] = $email;
+            $_SESSION['username'] = "Admin";
+            $_SESSION['role'] = "admin";
+            header( 'Location: role_management.php' );
+        }else if ( isset($users[$email])  && $users[$email]["password"] == $pwd) {   
             //userdata
-            $_SESSION['email'] = $users[$email];
+            $_SESSION['email'] = $email;
             $_SESSION['username'] = $users[$email]["username"];
             $_SESSION['role'] = $users[$email]["role"];
             header( 'Location: dashboard.php' );
@@ -65,8 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])){
     <div class="col-lg-offset-2 col-lg-10">
         <!-- login form -->
     <form method="post" class="form-horizontal" action="<?=htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <h2>User Login</h2>
-        <p class="text-danger">* Required field</p>
+        <h2>User Login</h2>       
 
         <?="<p class='text-danger'>$wrongErr</p>";?>
         <?="<h3 class='text-success'>$succMsg</h3>";?>
@@ -102,15 +106,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])){
             <div class="col-lg-offset-2 col-lg-4">
                 <button type="submit" name="login" class="btn btn-success">Submit</button>
                 <button type="reset" class="btn btn-default">Reset</button>
-            </div>
+            </div><br />
+            <p>&nbsp;&nbsp;&nbsp;<a href="registration.php">New here? Create an account</a></p>   
         </div>
     </form>
-
-        <!-- this part is to show what you have inputed -->
-    <?="<h3>Your input:</h3><br>"?>
-    <?="<h4>$email</h4><br>"?>
-    <?="<h4>$pwd</h4><br>"?>
-    <?="<h4>$remember</h4><br>"?>
 
     </div>
 </div>

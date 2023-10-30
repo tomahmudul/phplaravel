@@ -6,11 +6,10 @@ function validateInput( $data ) {
     return $data;
 }
 
-function saveUsers($data, $fileName){        
+function saveData($data, $fileName){        
     //print_r($data);exit;
     file_put_contents( $fileName, json_encode( $data, JSON_PRETTY_PRINT ) );
 }
-
 
 function checkFileExists($filePath) {
     if (!file_exists($filePath)) {

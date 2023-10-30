@@ -56,13 +56,27 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset( $_POST['register'] ) ) {
         if ( isset( $users[$email] ) ) {
             $errorMsg = "Email already exists.";
         } else {
+            
+            // $rolesFile = './role.json';
+            // $roles = file_exists( $rolesFile ) ? json_decode( file_get_contents( $rolesFile ), true ) : [];
+
+            // if ( !isset( $roles["user"] ) ) {
+                
+            //     $roles[$_REQUEST["roleName"]] = [
+            //         'roleName'     => $_REQUEST["roleName"]
+            //     ];
+        
+            //     saveData($roles, $rolesFile);
+            // }
+           
+
             $users[$email] = [
                 'username' => $username,
                 'password' => $pwd,
                 'role'     => 'user',
             ];
     
-            saveUsers($users, $usersFile);
+            saveData($users, $usersFile);
             header( 'Location: login.php?msg=userSuccess' );
         }
         
@@ -81,7 +95,6 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset( $_POST['register'] ) ) {
 
     <div class="col-lg-offset-2 col-lg-10">
     <h2 >Registration form</h2>
-    <p class="text-danger">* Required field</p>
       <!-- registration form -->
     <form method="post" class="form-horizontal" action="<?=htmlspecialchars( $_SERVER['PHP_SELF'] );?>">
         <?="<p class='text-danger'>$errorMsg</p>";?>
