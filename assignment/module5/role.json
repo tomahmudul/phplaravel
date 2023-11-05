@@ -1,0 +1,11 @@
+{
+    "user": {
+        "roleName": "user"
+    },
+    "Manager": {
+        "roleName": "Manager"
+    },
+    "Test": {
+        "roleName": "Test"
+    }
+}
